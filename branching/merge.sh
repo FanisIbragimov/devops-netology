@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash1
 # display command line options
 
 count=1
