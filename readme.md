@@ -1,29 +1,19 @@
-1. commit aefead2207ef7e2aa5dc81a34aedf0cad4c32545
-    Update CHANGELOG.md
-    
-2. tag: v0.12.23
-
-3. Два коммита: 
-commit 56cd7859e05c36c06b56d013b55a252d0bb7e158
-commit 9ea88f22fc6269854151c571162c5bcf958bee2b
-
-4.
-33ff1c03bb960b332be3af2e333462dde88b279e (tag: v0.12.24) v0.12.24
-b14b74c4939dcab573326f4e3ee2a62e23e12f89 [Website] vmc provider links
-3f235065b9347a758efadc92295b540ee0a5e26e Update CHANGELOG.md
-6ae64e247b332925b872447e9ce869657281c2bf registry: Fix panic when server is unreachable
-5c619ca1baf2e21a155fcdb4c264cc9e24a2a353 website: Remove links to the getting started guide's old location
-06275647e2b53d97d4f0a19a0fec11f6d69820b5 Update CHANGELOG.md
-d5f9411f5108260320064349b757f55c09bc4b80 command: Fix bug when using terraform login on Windows
-4b6d06cc5dcb78af637bbb19c198faff37a066ed Update CHANGELOG.md
-dd01a35078f040ca984cdd349f18d0b67e486c35 Update CHANGELOG.md
-225466bc3e5f35baa5d07197bbc079345b77525e Cleanup after v0.12.23 release
-
-5. Коммит в котором была создана фцнкция 5af1e6234
-
-6.
-35a058fb3 main: configure credentials from the CLI config file
-c0b176109 prevent log output during init
-8364383c3 Push plugin discovery down into command package
-
-7.Автор Author: Martin Atkins <mart@degeneration.co.uk>
+1.+
+2.+
+3.+
+4.vagrant suspend, vagrant up, vagrant halt выполняются корректно.
+5.ОЗУ 1024 Мб, 2 CPU, GPU Ram 4Mb, HDD Virtual 64Гб динамический. NAT
+6.Добавление оперативной памяти осуществляться путем изменения конфигурационного файла vagrantfile. Добавляем следующие строки
+	config.vm.provider :virtualbox do |vb|
+  		vb.customize ["modifyvm", :id, "--memory", "2048"]
+		vb.customize ["modifyvm", :id, "--cpus", "3"]
+	end
+7.+
+8.HISTSIZE, строка 844.
+  ignoreboth не записывет команды которые начинаются с пробела или команду которая дублируется.
+9. Строка 257.
+10. Получилось создать 100000 файлов вызовом touch a{1..100000}. Создать 300000 файлов не удалось, ошибка argument list too long.
+11. Конструкция [[ -d /tmp ]] используется в условных выражениях.      Принимает значение Истина если файл существет и директория  -d file  True if file exists and is a directory.
+12. export PATH=/tmp/new_path_directory/:$PATH
+13. Планирование задание командой batch отличается от at тем, что при batch задание выполняется в зависимости от степени загрузки системы.
+14. vagrant halt.
