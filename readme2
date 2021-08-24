@@ -1,0 +1,19 @@
+1.  Установили node_exporter. Создали юнит для него node_exporter.service в systemd. 
+[Unit]
+Description=Node Exporter Service
+After=network.target
+
+[Service]
+User=nodeusr
+Group=nodeusr
+Type=simple
+ExecStart=/usr/local/bin/node_exporter
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+Разрешаем автозагрузку systemctl enable node_exporter  
+2. Выбрал следующие опции meminfo,loadavg,filesystem,netdev  
+3. 
