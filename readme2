@@ -16,4 +16,9 @@ WantedBy=multi-user.target
 
 Разрешаем автозагрузку systemctl enable node_exporter  
 2. Выбрал следующие опции meminfo,loadavg,filesystem,netdev  
-3. 
+3. Установил netdata. Заменил с 127.0.0.1 на 0.0.0.0. Добавил проброс config.vm.network "forwarded_port", guest: 19999, host: 19999. Перезагрузил виртуалку.   
+После прошел по пути localhost:19999 и увидел панель)
+4. По команде dmesg с определенными ключами можно увидеть некоторые упоменания, характерные виртуальной машине. Например по выводу gmesg -S можно найти следующее:   
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006  
+Также можно набрать sudo dmesg | grep "Hypervisor detected" и увидем значение KVM.  
+
