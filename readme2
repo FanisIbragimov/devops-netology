@@ -13,6 +13,9 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+Подгрузка в параметров например из файла cron 
+EnvironmentFile=-/etc/default/cron
+ExecStart=/usr/sbin/cron -f -P $EXTRA_OPTS
 
 Разрешаем автозагрузку systemctl enable node_exporter  
 2. Выбрал следующие опции meminfo,loadavg,filesystem,netdev  
