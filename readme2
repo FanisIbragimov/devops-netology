@@ -25,6 +25,7 @@ ExecStart=/usr/sbin/cron -f -P $EXTRA_OPTS
 [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006  
 Также можно набрать sudo dmesg | grep "Hypervisor detected" и увидем значение KVM.  
 5. fs.nr_open поумолчанию настроен на следующую величину 1048576. Этот лимит ознаает максимальное количество открытых дескриптеорв. Можно посмотреть ограничения системы ulimit -n. Ее значеине = 1024.  
-6.  
+6. unshare -p sleep 1h  
+nsenter -t 13728 -p ps  
 7. Вывод dmesg вывел следующую информацю: fork rejected by pids controller in /user.slice/user-1000.slice/session-8.scope. Сработал стандартный механизм защиты от перегрузки системы. 
 
