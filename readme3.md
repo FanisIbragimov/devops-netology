@@ -1,7 +1,8 @@
 1. Ознакомился.  
 2. Файлы которые являются жесткими ссылками на исходный файл имеют те же права доступа, владельца и т.д., различаться могут только имена. Жесткая ссылка и файлимеют одинаковые inode. Жесткая ссылка это как буд то новое имя для исходнойго файла.  
 3. Выполнили замену vagranfile. Запустили виртуалку.  
-4. Используя fdisk сделали задание. sudo fdisk /dev/sdb  
+4. Используя fdisk сделали задание. 
+<code>sudo fdisk /dev/sdb  
 Command (m for help): n  
 Partition type  
 p   primary (1 primary, 0 extended, 3 free)  
@@ -28,7 +29,7 @@ Device     Boot   Start     End Sectors  Size Id Type
 The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.  
-  
+</code
 5. root@vagrant:~# sfdisk -d /dev/sdb > partitions.txt  
 root@vagrant:~# sfdisc /dev/sdc < partitions-sda.txt  
 -bash: sfdisc: command not found  
