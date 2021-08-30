@@ -99,6 +99,10 @@ root@vagrant:/tmp# gzip -t /tmp/new/test.gz
 root@vagrant:/tmp# echo $?  
 0  
 16. pvmove /dev/md1 /dev/md0  
-17. 
-
-
+17. mdadm --fail /dev/md0 /dev/sdb1  
+18. [278012.699150] md/raid1:md0: Disk failure on sdb1, disabling device.  
+                md/raid1:md0: Operation continuing on 1 devices.  
+19. root@vagrant:/tmp# gzip -t /tmp/new/test.gz  
+root@vagrant:/tmp# echo $?  
+0  
+20. vagrant destroy
