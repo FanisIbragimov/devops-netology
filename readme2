@@ -11,11 +11,14 @@ ExecStart=/usr/local/bin/node_exporter
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 
-[Install]
-WantedBy=multi-user.target
-Подгрузка в параметров например из файла cron 
-EnvironmentFile=-/etc/default/cron
-ExecStart=/usr/sbin/cron -f -P $EXTRA_OPTS
+Нам нужно создать файл Enviroment где мы пропишем необходимые аргменты.  
+Например в /etc/.pconf  
+следующего содержания  
+AR1=-o  
+AR2=-l  
+А в Unit файле прописать  
+EnvironmentFile=/etc/.pconf
+ExecStart = /usr/bin/node_explorer $AR1 $AR2
 
 Разрешаем автозагрузку systemctl enable node_exporter  
 2. Выбрал следующие опции meminfo,loadavg,filesystem,netdev  
