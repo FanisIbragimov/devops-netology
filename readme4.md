@@ -61,8 +61,75 @@
 >user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 YaBrowser/21.8.2.381 Yowser/2.5 Safari/537.36  
   
 Самый долгий запрос был на beacon.js (168 ms). Время выполнения скрипта 351 ms.  
-Скрин страницы во вложении 1.  
+![screen](https://user-images.githubusercontent.com/87299405/132948076-5b1a9493-dc99-4e42-a3b3-732b1d99d7f8.png) 
   
 3. Мой ip 	62.213.30.74.  
 4. Провайдер samtel. AS - AS15500  
-5. 
+5. Traceroute 8.8.8.8 сразу проходит через 10.0.2.2. Internet Assigned Numbers Authority (IANA).  
+6. Наибольшая задержка оказалась на 108.170.250.146 где то в США.  
+7. ЗА доменное имя отвечают сервера 8.8.8.8 и 8.8.4.4  
+>root@vagrant:~# root@vagrant:~# dig dns.google  
+>  
+>; <<>> DiG 9.16.1-Ubuntu <<>> dns.google  
+>;; global options: +cmd  
+>;; Got answer:  
+>;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42727  
+>;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1  
+>  
+>;; OPT PSEUDOSECTION:  
+>; EDNS: version: 0, flags:; udp: 65494  
+>;; QUESTION SECTION:  
+>;dns.google.                    IN      A  
+>  
+>;; ANSWER SECTION:  
+>dns.google.             865     IN      A       8.8.4.4  
+>dns.google.             865     IN      A       8.8.8.8  
+>  
+>;; Query time: 0 msec  
+>;; SERVER: 127.0.0.53#53(127.0.0.53)  
+>;; WHEN: Sat Sep 11 12:26:17 UTC 2021  
+>;; MSG SIZE  rcvd: 71  
+  
+8.  ip 8.8.8.8 соответствует dns.google
+>root@vagrant:~# dig -x 8.8.8.8  
+>  
+>; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8   
+>;; global options: +cmd  
+>;; Got answer:  
+>;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39952  
+>;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1  
+>  
+>;; OPT PSEUDOSECTION:  
+>; EDNS: version: 0, flags:; udp: 65494  
+>;; QUESTION SECTION:  
+>;8.8.8.8.in-addr.arpa.          IN      PTR  
+>  
+>;; ANSWER SECTION:  
+>8.8.8.8.in-addr.arpa.   6467    IN      PTR     dns.google.  
+>  
+>;; Query time: 0 msec  
+>;; SERVER: 127.0.0.53#53(127.0.0.53)  
+>;; WHEN: Sat Sep 11 12:32:37 UTC 2021  
+>;; MSG SIZE  rcvd: 73  
+  
+ip 8.8.4.4 соответствует dns.google  
+>root@vagrant:~# dig -x 8.8.4.4  
+>  
+>; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.4.4  
+>;; global options: +cmd  
+>;; Got answer:  
+>;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7129  
+>;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1  
+>  
+>;; OPT PSEUDOSECTION:  
+>; EDNS: version: 0, flags:; udp: 65494  
+>;; QUESTION SECTION:  
+>;4.4.8.8.in-addr.arpa.          IN      PTR  
+>  
+>;; ANSWER SECTION:  
+>4.4.8.8.in-addr.arpa.   1395    IN      PTR     dns.google.  
+>  
+>;; Query time: 7 msec  
+>;; SERVER: 127.0.0.53#53(127.0.0.53)  
+>;; WHEN: Sat Sep 11 12:37:39 UTC 2021   
+>;; MSG SIZE  rcvd: 73    
