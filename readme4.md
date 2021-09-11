@@ -1,4 +1,4 @@
-1. telnet stackoverflow.com 80  
+**1.** telnet stackoverflow.com 80  
 >HTTP/1.1 301 Moved Permanently  
 >cache-control: no-cache, no-store, must-revalidate  
 >location: https://stackoverflow.com/questions  
@@ -19,7 +19,7 @@
   
 Мы выполнили http запрос. Нам вернулся ответ от сервера. Выполнился редирект с кодом 301 на https://stackoverflow.com/questions.  
   
-2. Выполнили запрос и прикладывают ответ из влладки headers  
+**2.** Выполнили запрос и прикладывают ответ из влладки headers  
 >Request URL: https://stackoverflow.com/
 >Request Method: GET
 >Status Code: 200 
@@ -63,11 +63,15 @@
 Самый долгий запрос был на beacon.js (168 ms). Время выполнения скрипта 351 ms.  
 ![screen](https://user-images.githubusercontent.com/87299405/132948076-5b1a9493-dc99-4e42-a3b3-732b1d99d7f8.png) 
   
-3. Мой ip 	62.213.30.74.  
-4. Провайдер samtel. AS - AS15500  
-5. Traceroute 8.8.8.8 сразу проходит через 10.0.2.2. Internet Assigned Numbers Authority (IANA).  
-6. Наибольшая задержка оказалась на 108.170.250.146 где то в США.  
-7. ЗА доменное имя отвечают сервера 8.8.8.8 и 8.8.4.4  
+**3.** Мой ip 	62.213.30.74. 
+  
+**4.** Провайдер samtel. AS - AS15500  
+  
+**5.** Traceroute 8.8.8.8 сразу проходит через 10.0.2.2. Internet Assigned Numbers Authority (IANA).  
+
+**6.** Наибольшая задержка оказалась на 108.170.250.146 где то в США.  
+  
+**7.** ЗА доменное имя отвечают сервера 8.8.8.8 и 8.8.4.4  
 >root@vagrant:~# root@vagrant:~# dig dns.google  
 >  
 >; <<>> DiG 9.16.1-Ubuntu <<>> dns.google  
@@ -90,7 +94,7 @@
 >;; WHEN: Sat Sep 11 12:26:17 UTC 2021  
 >;; MSG SIZE  rcvd: 71  
   
-8.  ip 8.8.8.8 соответствует dns.google
+**8.**  ip 8.8.8.8 соответствует dns.google  
 >root@vagrant:~# dig -x 8.8.8.8  
 >  
 >; <<>> DiG 9.16.1-Ubuntu <<>> -x 8.8.8.8   
