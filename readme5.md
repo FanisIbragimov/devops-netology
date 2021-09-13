@@ -9,11 +9,39 @@
   
 **3.** Для разделения L2 коммутатора используется технология VLAN создаются виртуальные подсети.  
 В Linux есть пакет vlan, с помощью него можно конфигурировать VLAN.  
->auto eth0.1700  
->iface eth0.1700 inet static  
->address 192.168.1.2  
+Пример конфига для создания vlan17 на eth0.  
+Для настройки нужно отредактировать файл /etc/network/interfaces  
+  
+>auto vlan17  
+>iface vlan17 inet static  
+>address 192.168.0.12
 >netmask 255.255.255.0  
->vlan-raw-device eth0  
+>vlan_raw_device eth0  
+  
+Нужно перезагрузить службу.  
+>/etc/init.d/networking restart  
+  
+Вывод сетевых интерфейсов:  
+  
+>root@vagrant:~# ip a  
+>1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000  
+>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00  
+>    inet 127.0.0.1/8 scope host lo  
+>       valid_lft forever preferred_lft forever  
+>    inet6 ::1/128 scope host  
+>       valid_lft forever preferred_lft forever  
+>2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000  
+>    link/ether 08:00:27:73:60:cf brd ff:ff:ff:ff:ff:ff  
+>    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0  
+>       valid_lft 65196sec preferred_lft 65196sec  
+>    inet6 fe80::a00:27ff:fe73:60cf/64 scope link  
+>       valid_lft forever preferred_lft forever  
+>3: vlan17@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000  
+>    link/ether 08:00:27:73:60:cf brd ff:ff:ff:ff:ff:ff  
+>    inet 192.168.0.10/24 brd 192.168.0.255 scope global vlan17  
+>       valid_lft forever preferred_lft forever  
+>    inet6 fe80::a00:27ff:fe73:60cf/64 scope link  
+>       valid_lft forever preferred_lft forever  
   
 **4.** Сущетсвует 6 типов агрегации интерфейсов в Linux.  
 mode=0 (balance-rr)  
