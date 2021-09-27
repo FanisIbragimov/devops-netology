@@ -31,6 +31,25 @@
 >      path 7FE11209F9E0 RPKI State valid  
 >      rx pathid: 0, tx pathid: 0x0  
   
+**2.Создаем Dummy интерфейс и назначаем ему адреса. Ниже приведен результат выполнения команды ifconfig**  
+>root@vagrant:~# ifconfig  
+>dummy0: flags=195<UP,BROADCAST,RUNNING,NOARP>  mtu 1500  
+>        inet 10.2.2.2  netmask 255.255.255.255  broadcast 10.2.2.2  
+>        inet6 fe80::b4ec:44ff:fe20:71ea  prefixlen 64  scopeid 0x20<link>  
+>        ether b6:ec:44:20:71:ea  txqueuelen 1000  (Ethernet)  
+>        RX packets 0  bytes 0 (0.0 B)  
+>        RX errors 0  dropped 0  overruns 0  frame 0  
+>        TX packets 12  bytes 840 (840.0 B)  
+>        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0  
+  
+**Добавляем маршрут до сети**  
+>ip route add 10.2.2.2 via 10.0.2.15  
+>ip route   
+>default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100  
+>10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15  
+>10.0.2.2 dev eth0 proto dhcp scope link src 10.0.2.15 metric 100  
+>10.2.2.2 via 10.0.2.15 dev eth0  
+   
 **3.Чтобы увидеть открытые TCP порты нужно увидеть следующую команду**  
 >**root@vagrant:~# netstat -ltupn**  
 >Active Internet connections (only servers)
