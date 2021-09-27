@@ -31,7 +31,7 @@
 >      path 7FE11209F9E0 RPKI State valid  
 >      rx pathid: 0, tx pathid: 0x0  
   
-**2.**Чтобы увидеть открытые TCP порты нужно увидеть следующую команду**  
+**3.Чтобы увидеть открытые TCP порты нужно увидеть следующую команду**  
 >**root@vagrant:~# netstat -ltupn**  
 >Active Internet connections (only servers)
 >Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name  
