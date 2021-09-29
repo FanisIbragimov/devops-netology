@@ -22,8 +22,8 @@
 >  
 > Start 2021-09-29 14:57:01        -->> 31.31.196.17:443 (www.tb63.ru) <<--  
 >  
-..   
-..  
+>..   
+>..  
 >-----------------------------------------------------------------------------------------------------------------------------  
 > xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 256   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384          
 > xc028   ECDHE-RSA-AES256-SHA384           ECDH 256   AES         256      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384          
@@ -41,4 +41,28 @@
 >  
 > Done 2021-09-29 14:57:06 [   7s] -->> 31.31.196.17:443 (www.tb63.ru) <<--  
   
-5.
+5.  
+**7. Сняли дамп с интерфейса eth0 в файл 0001.pcap**  
+>root@vagrant:~# tshark -r /root/0001.pcap  
+>Running as user "root" and group "root". This could be dangerous.  
+>    1   0.000000    10.0.2.15 → 10.0.2.2     SSH 178 Server: Encrypted packet (len=124)  
+>    2   0.000203     10.0.2.2 → 10.0.2.15    TCP 60 58086 → 22 [ACK] Seq=1 Ack=125 Win=65535 Len=0  
+>    3  41.654546 fe80::a00:27ff:fe73:60cf → ff02::2      ICMPv6 70 Router Solicitation from 08:00:27:73:60:cf  
+>    4 352.591119     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [SYN] Seq=0 Win=65535 Len=0 MSS=1460  
+>    5 352.591143    10.0.2.15 → 10.0.2.2     TCP 58 22 → 64151 [SYN, ACK] Seq=0 Ack=1 Win=64240 Len=0 MSS=1460  
+>    6 352.591249     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [ACK] Seq=1 Ack=1 Win=65535 Len=0  
+>    7 352.591595     10.0.2.2 → 10.0.2.15    SSH 87 Client: Protocol (SSH-2.0-OpenSSH_for_Windows_7.7)  
+>..  
+>..  
+>   90 360.183785     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [ACK] Seq=2966 Ack=4090 Win=65535 Len=0  
+>   91 361.300392     10.0.2.2 → 10.0.2.15    SSHv2 90 Client: Encrypted packet (len=36)  
+>   92 361.300726    10.0.2.15 → 10.0.2.2     SSHv2 90 Server: Encrypted packet (len=36)  
+>   93 361.300999     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [ACK] Seq=3002 Ack=4126 Win=65535 Len=0  
+>   94 361.460306     10.0.2.2 → 10.0.2.15    SSHv2 90 Client: Encrypted packet (len=36)  
+>   95 361.460650    10.0.2.15 → 10.0.2.2     SSHv2 90 Server: Encrypted packet (len=36)  
+>   96 361.460884     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [ACK] Seq=3038 Ack=4162 Win=65535 Len=0  
+>   97 361.748021     10.0.2.2 → 10.0.2.15    SSHv2 90 Client: Encrypted packet (len=36)  
+>   98 361.748340    10.0.2.15 → 10.0.2.2     SSHv2 90 Server: Encrypted packet (len=36)  
+>   99 361.748612     10.0.2.2 → 10.0.2.15    TCP 60 64151 → 22 [ACK] Seq=3074 Ack=4198 Win=65535 Len=0  
+>  100 361.915701     10.0.2.2 → 10.0.2.15    SSHv2 90 Client: Encrypted packet (len=36)  
+  
