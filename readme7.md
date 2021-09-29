@@ -42,7 +42,13 @@
 > Done 2021-09-29 14:57:06 [   7s] -->> 31.31.196.17:443 (www.tb63.ru) <<--  
   
 5.  
-**7. Сняли дамп с интерфейса eth0 в файл 0001.pcap**  
+**7. Сняли дамп с интерфейса eth0 в файл 0001.pcap** 
+>root@vagrant:~# tcpdump -w 0001.pcap -c 100 -i eth0  
+>tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes  
+>100 packets captured  
+>111 packets received by filter  
+>0 packets dropped by kernel  
+  
 >root@vagrant:~# tshark -r /root/0001.pcap  
 >Running as user "root" and group "root". This could be dangerous.  
 >    1   0.000000    10.0.2.15 → 10.0.2.2     SSH 178 Server: Encrypted packet (len=124)  
