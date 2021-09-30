@@ -41,7 +41,30 @@
 >  
 > Done 2021-09-29 14:57:06 [   7s] -->> 31.31.196.17:443 (www.tb63.ru) <<--  
   
-5.  
+**5.  Установили ssh сервер и сгенерировали ключи**  
+>root@vagrant:~# ssh-keygen  
+>Generating public/private rsa key pair.  
+>Enter file in which to save the key (/root/.ssh/id_rsa):  
+>Created directory '/root/.ssh'.  
+>Enter passphrase (empty for no passphrase):  
+>Enter same passphrase again:  
+>Your identification has been saved in /root/.ssh/id_rsa  
+>Your public key has been saved in /root/.ssh/id_rsa.pub  
+>The key fingerprint is:  
+>SHA256:IV+qp/dBj70SeifAZpQlwlDkYI16S/g/84F4fQmRY+k root@vagrant  
+>The key's randomart image is:  
+>+---[RSA 3072]----+   
+>|    +Bo          |  
+>|   ..o+ .o.      |  
+>|   o  o.B+.      |  
+>|  o o  =o*       |  
+>|   + . oE .      |  
+>|    o. +=o.=     |  
+>|    ..+o+o=.o    |  
+>|     .+ooo+...   |  
+>|      .=.o.+.    |  
+>+----[SHA256]-----+  
+  
 **7. Сняли дамп с интерфейса eth0 в файл 0001.pcap** 
 >root@vagrant:~# tcpdump -w 0001.pcap -c 100 -i eth0  
 >tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes  
