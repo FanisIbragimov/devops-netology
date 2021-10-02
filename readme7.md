@@ -1,5 +1,7 @@
 **1. Установили дополнение Bitwarden и зарегистрировались.**  
 **2. Установили Google authenticator на телефон и произвели настройку входа в Bitwarden.**  
+**3. К сожалению мне неудалось добавить сайт на свою систему. При выполнении команда a2ensite site.ru  мне выдает ошибку  
+ERROR: Site site.ru does not exist. бился 2 дня и никакого регузьтата**
 **4. Тест сайта на TLS уязвимости**  
 >root@vagrant:~/testssl.sh# ./testssl.sh -e --fast --parallel https://www.tb63.ru/  
 >  
@@ -65,6 +67,7 @@
 >|      .=.o.+.    |  
 >+----[SHA256]-----+  
   
+**6. Я создал вторую виртуальную машину, но мне неудается к ней подключится. Нет связи между двумя виртуалками...**
 **7. Сняли дамп с интерфейса eth0 в файл 0001.pcap** 
 >root@vagrant:~# tcpdump -w 0001.pcap -c 100 -i eth0  
 >tcpdump: listening on eth0, link-type EN10MB (Ethernet), capture size 262144 bytes  
