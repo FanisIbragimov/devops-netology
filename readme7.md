@@ -13,7 +13,9 @@
 >........................+++++  
 >writing new private key to '/etc/ssl/private/apache-selsigned.key'  
 >  
-Создал файл конфигурации site.ru.conf в директории /etc/apache2/sites-evailable/  
+
+Создал файл конфигурации site.ru.conf в директории /etc/apache2/sites-evailable/   
+
 >sudo nano site.ru.conf
 ><VirtualHost *:443>  
 >ServerName site.ru  
@@ -22,14 +24,19 @@
 >SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt  
 >SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key  
 ></VirtualHost>  
+
 Далее создал тестовый html index.html в директории /var/www/site.ru  
 Применил команды sudo a2ensite site.ru.conf выдал ошибку следующую  
+
 >ERROR: Site site.ru not properly enabled: /etc/apache2/sites-enabled/site.ru.conf is a real file, not touching it  
+
 Далее применил команду   
+
 >sudo apache2ctl configtest  
 >AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message  
 >Syntax OK  
 >sudo systemctl reload apache2  
+
 После открыл браузер и набрал сайт site.ru 
 Вышла следующая ошибка ![Снимок](https://user-images.githubusercontent.com/87299405/135749453-69f929a2-8b90-4f50-979e-b4b82cbb8605.PNG)
   
@@ -96,7 +103,9 @@
 >|    ..+o+o=.o    |  
 >|     .+ooo+...   |  
 >|      .=.o.+.    |  
->+----[SHA256]-----+  
+>+----[SHA256]-----+    
+  
+Мне не удалось скопировать созданный публичный ключ на вторую виртуальную машину. И как следствие неудалось подключится через ssh. Ping не идет.
   
 **6. Я создал вторую виртуальную машину, но мне неудается к ней подключится. Нет связи между двумя виртуалками...**
 **7. Сняли дамп с интерфейса eth0 в файл 0001.pcap** 
