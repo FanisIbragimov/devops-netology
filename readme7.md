@@ -31,8 +31,8 @@
 >Syntax OK  
 >sudo systemctl reload apache2  
 После открыл браузер и набрал сайт site.ru 
-Вышла следующая ошибка 
-ERROR: Site site.ru does not exist. бился 2 дня и никакого регузьтата**
+Вышла следующая ошибка ![Снимок](https://user-images.githubusercontent.com/87299405/135749453-69f929a2-8b90-4f50-979e-b4b82cbb8605.PNG)
+  
 **4. Тест сайта на TLS уязвимости**  
 >root@vagrant:~/testssl.sh# ./testssl.sh -e --fast --parallel https://www.tb63.ru/  
 >  
