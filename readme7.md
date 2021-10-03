@@ -22,6 +22,16 @@
 >SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt  
 >SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key  
 ></VirtualHost>  
+Далее создал тестовый html index.html в директории /var/www/site.ru  
+Применил команды sudo a2ensite site.ru.conf выдал ошибку следующую  
+>ERROR: Site site.ru not properly enabled: /etc/apache2/sites-enabled/site.ru.conf is a real file, not touching it  
+Далее применил команду   
+>sudo apache2ctl configtest  
+>AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message  
+>Syntax OK  
+>sudo systemctl reload apache2  
+После открыл браузер и набрал сайт site.ru 
+Вышла следующая ошибка 
 ERROR: Site site.ru does not exist. бился 2 дня и никакого регузьтата**
 **4. Тест сайта на TLS уязвимости**  
 >root@vagrant:~/testssl.sh# ./testssl.sh -e --fast --parallel https://www.tb63.ru/  
