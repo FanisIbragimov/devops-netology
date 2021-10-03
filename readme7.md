@@ -3,7 +3,25 @@
 **3. К сожалению мне неудалось добавить сайт на свою систему. При выполнении команда a2ensite site.ru  мне выдает ошибку**  
 По этому заданию я установил apache2, далее сгенерировал самоподписанный сертификат. 
 >sudo apt install apache2  
->
+>sudo a2enmod ssl  
+>sudo systemctl restart apache2  
+>root@user-VirtualBox:/etc/ssl/private# sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selsigned.key -out /etc/ssl/certs/apache-selfsigned.crt  
+>Can't load /root/.rnd into RNG  
+>139640834982336:error:2406F079:random number generator:RAND_load_file:Cannot open file:../crypto/rand/randfile.c:88:Filename=/root/.rnd  
+>Generating a RSA private key  
+>..........+++++  
+>........................+++++  
+>writing new private key to '/etc/ssl/private/apache-selsigned.key'  
+>  
+Создал файл конфигурации site.ru.conf в директории /etc/apache2/sites-evailable/  
+>sudo nano site.ru.conf
+><VirtualHost *:443>  
+>ServerName site.ru  
+>DocumentRoot /var/www/site.ru/
+>SSLEngine on  
+>SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt  
+>SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key  
+></VirtualHost>  
 ERROR: Site site.ru does not exist. бился 2 дня и никакого регузьтата**
 **4. Тест сайта на TLS уязвимости**  
 >root@vagrant:~/testssl.sh# ./testssl.sh -e --fast --parallel https://www.tb63.ru/  
