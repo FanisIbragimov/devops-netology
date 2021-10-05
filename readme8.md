@@ -1,0 +1,27 @@
+**1** Работа с переменными  
+>root@vagrant:~# a=1  
+>root@vagrant:~# b=2  
+>root@vagrant:~# c=a+b  
+>root@vagrant:~# d=$a+$b  
+>root@vagrant:~# e=$(($a+$b))  
+>root@vagrant:~# echo c  
+>c  
+>root@vagrant:~# echo $c  
+>a+b  
+>root@vagrant:~# echo $d  
+>1+2  
+>root@vagrant:~# echo $e  
+>3  
+  
+Когда присваиваем значения переменным a,b bash воспринимает их как строку. При выводе с он воспринимает как строку и выводит a+b.  
+При вводе значения d и $a+$b bash переводит a и b в число. Но выводит результат как строку 1+2  
+При вводе e уже идет суммирование значение a и b и выводится сумма.  
+  
+while ((1==1))
+do
+curl https://localhost:4757
+if (($? != 0))
+then
+date >> curl.log
+fi
+done
