@@ -1,19 +1,20 @@
 **Задание №1**  
 Работа с переменными  
-  ```bash  
-  root@vagrant: a=1  
-  root@vagrant: b=2  
-  root@vagrant: c=a+b  
-  root@vagrant: d=$a+$b  
-  root@vagrant: e=$(($a+$b))  
-  root@vagrant: echo c  
-  c  
-  root@vagrant: echo $c  
-  a+b  
-  root@vagrant: echo $d  
-  1+2  
-  root@vagrant: echo $e  
-  3  
+  
+  ```bash
+  root@vagrant: a=1
+  root@vagrant: b=2
+  root@vagrant: c=a+b
+  root@vagrant: d=$a+$b
+  root@vagrant: e=$(($a+$b))
+  root@vagrant: echo c
+  c
+  root@vagrant: echo $c
+  a+b
+  root@vagrant: echo $d
+  1+2
+  root@vagrant: echo $e
+  3
   ```  
   
 Когда присваиваем значения переменным a,b bash воспринимает их как строку. При выводе с он воспринимает как строку и выводит a+b.  
