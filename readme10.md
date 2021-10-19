@@ -14,6 +14,8 @@
     ]
   }
   ```
-  ![1111](https://user-images.githubusercontent.com/87299405/137679067-0d56fb79-c702-4285-a3da-5bce34e18f33.png)
+  
+![137679067-0d56fb79-c702-4285-a3da-5bce34e18f33](https://user-images.githubusercontent.com/87299405/137909425-3b786d25-3b10-496e-bb68-379fedf855cb.png)
+
 
 **ЗАДАНИЕ №2** Не рашил, потому что еще не выполнил предыдущее задание на python.
