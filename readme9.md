@@ -46,4 +46,11 @@ for result in result_os.split('\n'):
 ![111](https://user-images.githubusercontent.com/87299405/137577244-8767feb9-82fb-493a-86bf-fb699dfcc36f.png)
 
 **ЗАДАНИЕ №4**  
-С заданием 4 проблема, не могу додуматься как его сделать.
+С этим заданием так вот получилось  
+  ```bash
+  import socket
+  IP_Range = ["google.com", "drive.google.com", "mail.google.com"]
+  for i in range(len(IP_Range)): print(IP_Range[i]), socket.gethostbyname(IP_Range[i])
+  ```
+
+![333](https://user-images.githubusercontent.com/87299405/138063538-dc752532-97a4-4d4c-85fe-5a3e53feeedf.png)
