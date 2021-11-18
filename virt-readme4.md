@@ -15,6 +15,8 @@
 **Задание №4** 
 Здесь я создал вторую ВМ.Изменил конфиг prometheus.yml. Перезапустил сервис на первом сервере.
 Подскажите где в интерфейсе Grafana мы должны увидеть данные по второму серверу? и как мы можем проверить что корректно все установилось?  
+Конфиг prometheus.yml  
+
 ``` global:
   scrape_interval:     15s
   evaluation_interval: 15s
@@ -73,4 +75,5 @@ alerting:
 ```
 ![Снимок экрана от 2021-11-18 13-24-39](https://user-images.githubusercontent.com/87299405/142388180-184927a7-3536-4260-b7da-655174ec6fd3.png)
 ![Снимок экрана от 2021-11-18 13-27-21](https://user-images.githubusercontent.com/87299405/142388397-339d1c65-8ae2-49a4-a3ee-ac44fef0b206.png)  
+![Снимок экрана от 2021-11-18 13-50-33](https://user-images.githubusercontent.com/87299405/142392122-a1b77918-14b4-457c-8498-4d60107cf57a.png)
 
