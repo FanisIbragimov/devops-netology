@@ -29,7 +29,27 @@ services:
 ![Снимок экрана от 2021-12-01 21-39-36](https://user-images.githubusercontent.com/87299405/144285614-4f466f57-9aa9-4e1c-b802-5c3676a0b6f7.png)   
     
 **Задание №4**   
-   
+``` 
+test_db=# update clients set заказ = '4' where id = '1';
+UPDATE 1
+test_db=# update clients set заказ = '5' where id = '2';
+UPDATE 1
+test_db=# update clients set заказ = '6' where id = '3';
+UPDATE 1
+test_db=# 
+```
+Результат  
+```
+test_db=# select * from clients;
+ id |         ФИО          |       страна проживания        | заказ 
+----+----------------------+--------------------------------+-------
+  4 | Ронни Джеймс Дио     | Russia                         |      
+  5 | Richie Blackmore     | Russia                         |      
+  1 | Иванов Иван Иванович | USA                            |     4
+  2 | Петров Петр Петрович | Canada                         |     5
+  3 | Иоган Себастьян Бах  | Japan                          |     6
+(5 строк)
+```
 **Задание №5**   
    
 **Задание №6**   
