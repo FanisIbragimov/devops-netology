@@ -54,6 +54,7 @@ test_db=# select * from clients;
 Выполнили команду test_db=# EXPLAIN (FORMAT JSON) SELECT * FROM orders;
 для вывода обработки процесса выполнения запроса.  
 ![Снимок экрана от 2021-12-03 18-55-58](https://user-images.githubusercontent.com/87299405/144624149-67324bd1-bde8-4014-b65d-9143d8742775.png) ![Снимок экрана от 2021-12-03 18-56-23](https://user-images.githubusercontent.com/87299405/144624202-fd1cb079-c869-4855-a765-0f1895378e33.png)
+   
 Вывелась информация позапросу.
 Тип запроса Seq Scan - применяется последовательное сканирование таблицы.
 Startup Total cost - стоимость запуска и полную стоимость запроса.
