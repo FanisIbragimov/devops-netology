@@ -16,6 +16,18 @@ services:
     ports:
       - "3306:3306"
 ```
+Далее восстановили БД из дампа  
+```
+ mysql test_db < test_dump.sql
+``` 
+Версия сервера: 8.0.27 MySQL Community Server - GPL   
+![Снимок экрана от 2021-12-04 18-22-42](https://user-images.githubusercontent.com/87299405/144713000-4715ee29-06cc-44cf-9540-968c24bcd556.png)  
+    
+Список таблиц БД  
+![Снимок экрана от 2021-12-04 18-24-02](https://user-images.githubusercontent.com/87299405/144713038-0035658b-b788-40a1-8e34-06d0dbb70734.png)  
+   
+Количество записей с price > 300.   
+![Снимок экрана от 2021-12-04 18-18-53](https://user-images.githubusercontent.com/87299405/144713073-59f2265b-647b-49f9-8320-f5c1e70b3ddb.png)
 
 **Задание №2**   
    
