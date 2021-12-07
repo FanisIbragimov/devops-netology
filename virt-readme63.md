@@ -30,7 +30,10 @@ services:
 ![Снимок экрана от 2021-12-04 18-18-53](https://user-images.githubusercontent.com/87299405/144713073-59f2265b-647b-49f9-8320-f5c1e70b3ddb.png)
 
 **Задание №2**   
-   
+Создали пользователя test.
+Скрин из таблицы с запросом из INFORMATION_SCHEMA.USER_ATTRIBUTES.
+![Снимок экрана от 2021-12-07 14-35-07](https://user-images.githubusercontent.com/87299405/145013601-d368c775-5a7e-4448-84f1-d07ca556091c.png)
+
 **Задание №3**  
    
 **Задание №4**   
