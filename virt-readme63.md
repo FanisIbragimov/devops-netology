@@ -42,4 +42,19 @@ services:
 При одинаковых запросах MyISAM оказалась быстрее,так как тратит меньше времени на выполнение запросов 10 и 14.  
 ![Снимок экрана от 2021-12-08 18-58-43](https://user-images.githubusercontent.com/87299405/145230818-c14bb7ea-c873-4d58-98bc-66087da49f36.png)
 
-**Задание №4**   
+**Задание №4**  
+Провели следующие настройки файла my.cnf   
+```
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+secure-file-priv= NULL
+
+# Custom config should go here
+!includedir /etc/mysql/conf.d/
+innodb_buffer_pool_size = 2G
+innodb_log_file_size = 100M
+innodb_file_per_table = ON
+innodb_flush_log_at_trx_commit = 2
+```
