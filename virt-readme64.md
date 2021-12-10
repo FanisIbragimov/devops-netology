@@ -22,3 +22,7 @@ services:
     -вывод описания содержимого таблиц  - \d+ table_name   
     -выход из psql                      - \q   
 
+**Задание №2**   
+Создали БД командой ``` create database test_database; ```     
+Восстановили данные из бэкапа.   
+``` psql -U user test_database < /docker-entrypoint-initdb.d/test_dump.sql ```
