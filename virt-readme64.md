@@ -1,0 +1,16 @@
+**Задание №1**   
+Создали контейнер с postgresql  
+```
+version: "3.3"
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_USER: "user"
+      POSTGRES_PASSWORD: "user"
+    volumes:
+      - .:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+```
