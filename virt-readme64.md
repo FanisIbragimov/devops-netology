@@ -40,4 +40,6 @@ create table orders_2 (check (price <= 499)) inherits(orders);
 create table orders_1 (check (price > 499)) inherits(orders); 
 create rule insert_down_499 as on insert to orders where (price <= 499) do instead insert into orders_2 values (new.);
 create rule insert_up_499 as on insert to orders where (price > 499) do instead insert into orders_1 values (new.*);
-```   
+```  
+**Задание №4**   
+pg_dump -U user test_database > backup.dump
