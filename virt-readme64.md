@@ -32,3 +32,12 @@ services:
 
 Скрин ответа ниже:
 ![Снимок экрана от 2021-12-12 11-58-31](https://user-images.githubusercontent.com/87299405/145705029-ff87cb61-e183-43dd-bd79-ae63f12f6094.png)
+   
+**Задание №3**   
+Для партиции общей таблицы можно использовать следующие команды:
+```
+create table orders_2 (check (price <= 499)) inherits(orders); 
+create table orders_1 (check (price > 499)) inherits(orders); 
+create rule insert_down_499 as on insert to orders where (price <= 499) do instead insert into orders_2 values (new.);
+create rule insert_up_499 as on insert to orders where (price > 499) do instead insert into orders_1 values (new.*);```   
+
