@@ -46,4 +46,9 @@ create rule insert_up_499 as on insert to orders where (price > 499) do instead 
 **Задание №4**   
 pg_dump -U user test_database > backup.dump   
 **Добавить уникальность столбца title можно сделать отредкатировав файл бекапа в текстовом редакторе, присвоив уникальное значение столбцу title.**   
+Я сохранил бекап в формате sql. Далее открыл из volume редактором этот файл и добавил уникальности столбцу title  
+```
+    CONSTRAINT order_unique UNIQUE (title)
+```   
+![Снимок экрана от 2021-12-19 22-32-52](https://user-images.githubusercontent.com/87299405/146686715-e193d026-8b6b-4717-878d-90a83c17666d.png)
 
