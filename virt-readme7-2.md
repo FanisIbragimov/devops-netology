@@ -6,4 +6,4 @@
    
 **Задание №2**   
 1. Для создания образа AMI можно использовать Packer.   
-2. 
+2. https://gitlab.com/FanisIbragimov/devops-netology/-/tree/main/terraform
