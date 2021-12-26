@@ -48,22 +48,27 @@ for result in result_os.split('\n'):
 **ЗАДАНИЕ №4**  
 С этим заданием так вот получилось  
   ```bash
-	import socket
-	IP_Range = {"google.com":"192.168.0.1", "drive.google.com":"192.168.0.2", "mail.google.com":"192.168.0.3"}
-	IP_Range_NEW = IP_Range.copy()
-	while IP_Range.values() != IP_Range_NEW.values():
-    		for k, v in IP_Range.items():
-        		ip_new = socket.gethostbyname(k)
-        		IP_Range_NEW.update({k: ip_new})
-        		print('[Error] ' + '<' + k + '>' + ' IP mismatch: ' + '<' + ip_new + '>' + ' ' + '<' + v + '>')
-        		IP_Range.update({k: ip_new})
-    		break
-    		if IP_Range.values() == IP_Range_NEW.values():
-        		print('OK')
-	print(IP_Range)
-	print(IP_Range_NEW)
+import socket
+
+IP_Range = {"google.com": "74.125.131.10", "drive.google.com": "142.250.10.194", "mail.google.com": "173.14.222.18"}
+IP_Range_NEW = IP_Range.copy()
+while IP_Range_NEW.values() != IP_Range.values():
+    for k in IP_Range_NEW:
+        ip_new = socket.gethostbyname(k)
+        IP_Range_NEW[k] = ip_new
+        IP_Range_NEW.update({k: ip_new})
+        if IP_Range_NEW['google.com'] != IP_Range['google.com']:
+            print('[Error] ' + '<' + 'google.com' + '>' + ' IP mismatch: ' + '<' + IP_Range_NEW['google.com'] + '>' + ' ' + '<' + IP_Range['google.com'] + '>')
+        elif IP_Range_NEW['drive.google.com'] != IP_Range['drive.google.com']:
+            print('[Error] ' + '<' + 'drive.google.com' + '>' + ' IP mismatch: ' + '<' + IP_Range_NEW['drive.google.com'] + '>' + ' ' + '<' + IP_Range['drive.google.com'] + '>')
+        elif IP_Range_NEW['mail.google.com'] != IP_Range['mail.google.com']:
+            print('[Error] ' + '<' + 'mail.google.com' + '>' + ' IP mismatch: ' + '<' + IP_Range_NEW['mail.google.com'] + '>' + ' ' + '<' + IP_Range['mail.google.com'] + '>')
+        else:
+            print('OK')
+        IP_Range = IP_Range_NEW.copy()
   ```
 
-![3332](https://user-images.githubusercontent.com/87299405/139091844-b53e0d20-9cdc-4a72-83cc-d89969988759.JPG)
+![Снимок](https://user-images.githubusercontent.com/87299405/147404188-a5dfee42-cb51-4a73-870f-451a4c1dffc5.JPG)
+
 
 
