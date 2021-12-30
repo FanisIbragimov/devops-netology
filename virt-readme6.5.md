@@ -18,3 +18,6 @@ RUN yum install -y elasticsearch
 RUN systemctl enable elasticsearch.service
 RUN /etc/init.d/elasticsearch start
 ```
+   
+Ссылка на докер образ:
+https://hub.docker.com/layers/184794145/infanis/infanis/elastick/images/sha256-b3a0fe8ebd593a367dd198698062c5a86c7d381c95b049b0088552196e44cf31?context=repo
