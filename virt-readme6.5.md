@@ -58,10 +58,10 @@ https://hub.docker.com/layers/184794145/infanis/infanis/elastick/images/sha256-b
 Скрин с запросами и выводом:   
 ![Снимок экрана от 2022-01-01 20-35-59](https://user-images.githubusercontent.com/87299405/147855379-1f58bc23-0bea-4314-a8d4-d05dd02e9018.png)   
    
-2.Создали снепшот и вывели список файлов по созданному снепу.  
+2.Создали snapshot и вывели список файлов по созданному snapshot.  
 ![Снимок экрана от 2022-01-01 22-19-16](https://user-images.githubusercontent.com/87299405/147857462-0eb9ac05-adc7-4370-9b1a-843d343b8107.png)   
-
-
+   
+   
 3. Удалили индекс и создали новый индекс test-2   
 ![Снимок экрана от 2022-01-01 22-23-12](https://user-images.githubusercontent.com/87299405/147857547-6989a93c-b00d-4254-b35d-f97d1be18e75.png)   
   
