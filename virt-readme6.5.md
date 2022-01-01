@@ -65,3 +65,5 @@ https://hub.docker.com/layers/184794145/infanis/infanis/elastick/images/sha256-b
 3. Удалили индекс и создали новый индекс test-2   
 ![Снимок экрана от 2022-01-01 22-23-12](https://user-images.githubusercontent.com/87299405/147857547-6989a93c-b00d-4254-b35d-f97d1be18e75.png)   
   
+4. Восстановили данные из snapshot.  Команды и вывод индексов на скрине   
+![Снимок экрана от 2022-01-01 22-30-06](https://user-images.githubusercontent.com/87299405/147857661-15cd185a-14c6-45ce-9712-5e51472236ad.png)
