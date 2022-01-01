@@ -44,3 +44,11 @@ https://hub.docker.com/layers/184794145/infanis/infanis/elastick/images/sha256-b
 }  
 ```   
 
+**Задание №2**    
+1. Добавили 3 индекса согласно таблицы и получили их статусы:  
+![Снимок экрана от 2022-01-01 13-36-32](https://user-images.githubusercontent.com/87299405/147847948-8ab6f7b0-b1ac-446e-84d3-a3d50d1b4ef3.png)   
+   
+2. Получили статус сервера:  
+![Снимок экрана от 2022-01-01 13-38-08](https://user-images.githubusercontent.com/87299405/147847958-a24464cc-8a32-4d2d-a893-8bf9c36c24d4.png)   
+   
+
