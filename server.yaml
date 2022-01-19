@@ -1,1 +1,7 @@
-Server
+atlantis server \
+--atlantis-url="https://infanis.ngroc.io/" \
+--gh-user="infanis@gmail.com" \
+--gh-token="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" \
+--gh-webhook-secret="$SECRET" \
+--repo-allowlist="$REPO_ALLOWLIST"
+--repo-config-json='{"repos":[{"id":"/.*/", "allowed_overrides":["apply_requirements","workflow"], "allow_custom_workflows":true}]}'
