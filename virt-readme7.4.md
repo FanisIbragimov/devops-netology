@@ -10,3 +10,7 @@
 2. Создали конфиг серверной части [server.yaml](https://github.com/FanisIbragimov/devops-netology/blob/main/server.yaml)   
 3. Создали конфиг [atlantis.yaml](https://github.com/FanisIbragimov/devops-netology/blob/main/atlantis.yaml)
 Предусмотрен запуск двух workspace-ов и включено автопланирование при изменении любых файлов *.tf.  
+   
+**Задание №3**    
+1. Нашли официальный модуль провайдера AWS для создания инстанса [EC2](https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest)  
+2. 
