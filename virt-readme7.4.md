@@ -13,4 +13,5 @@
    
 **Задание №3**    
 1. Нашли официальный модуль провайдера AWS для создания инстанса [EC2](https://registry.terraform.io/modules/terraform-aws-modules/ec2-instance/aws/latest)  
-2. 
+2. В нашем случае для поднятия инстанса проще подключить модуль, чем воспроизводить весь код который реализован в этом модуле.
+3. Папка с конфиг [файлами](https://github.com/FanisIbragimov/terraform)
