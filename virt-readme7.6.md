@@ -4,3 +4,20 @@ Resource находятся также в  файле [provider.go](https://gith
    
 **Задание №2**    
 1. Параметр **name** конфликтует с параметром **name_prefix** в следующем файле [queue.go](https://github.com/hashicorp/terraform-provider-aws/blob/main/internal/service/sqs/queue.go#L82-L94)
+```
+		"name": {
+			Type:          schema.TypeString,
+			Optional:      true,
+			Computed:      true,
+			ForceNew:      true,
+			ConflictsWith: []string{"name_prefix"},
+		},
+		"name_prefix": {
+			Type:          schema.TypeString,
+			Optional:      true,
+			Computed:      true,
+			ForceNew:      true,
+			ConflictsWith: []string{"name"},
+  ```   
+      
+      
