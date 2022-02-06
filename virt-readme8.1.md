@@ -57,6 +57,9 @@ ok: [ubuntu] => {
     "msg": "deb default fact"
 }
 ```   
-
+    
+**Необязательная часть**    
+1. Расшифровали ранее зашифрованные файлы.   
+![Снимок экрана от 2022-02-06 16-26-56](https://user-images.githubusercontent.com/87299405/152680686-edefbc50-8ecc-41f0-b149-1b2b19de2804.png)
 
 
