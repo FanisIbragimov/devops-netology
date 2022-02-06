@@ -28,7 +28,8 @@ ok: [ubuntu] => {
 ```    
 7. Зашифровали файлы group_vars/deb и group_vars/el с паролем netology.    
 8. Запустили плейбук с зашифрованными файлами с запросом пароля "ansible-playbook site.yml -i inventory/prod.yml --ask-vault-pass". Все прошло успешно.   
-9. 
+9. Для работы на control node целесообразно использовать плагин docker или local.   
+10. 
 
 
 
