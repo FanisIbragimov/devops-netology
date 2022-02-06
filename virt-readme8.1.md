@@ -15,7 +15,18 @@ ok: [centos7] => {
 ok: [ubuntu] => {
     "msg": "deb"
 }
-```   
+```    
+5. Изменили значения переменной в deb и el на 'deb default fact' и 'el default fact' соответственно.  
+6. Запустили плейбук заново. Вышли такие значения:
+```
+ok: [centos7] => {
+    "msg": "el default fact"
+}
+ok: [ubuntu] => {
+    "msg": "deb default fact"
+}
+```    
+
 
 
 
