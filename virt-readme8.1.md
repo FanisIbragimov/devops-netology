@@ -26,7 +26,8 @@ ok: [ubuntu] => {
     "msg": "deb default fact"
 }
 ```    
-
+7. Зашифровали файлы group_vars/deb и group_vars/el с паролем netology.    
+8. 
 
 
 
