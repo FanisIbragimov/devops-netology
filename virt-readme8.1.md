@@ -60,6 +60,7 @@ ok: [ubuntu] => {
     
 **Необязательная часть**    
 1. Расшифровали ранее зашифрованные файлы.   
-![Снимок экрана от 2022-02-06 16-26-56](https://user-images.githubusercontent.com/87299405/152680686-edefbc50-8ecc-41f0-b149-1b2b19de2804.png)
-
+![Снимок экрана от 2022-02-06 16-26-56](https://user-images.githubusercontent.com/87299405/152680686-edefbc50-8ecc-41f0-b149-1b2b19de2804.png)   
+2.Зашифровали пароль в строке some_fact: 
+![Снимок экрана от 2022-02-06 16-37-39](https://user-images.githubusercontent.com/87299405/152681096-271b3c4a-4f76-47f6-82b1-e10915e1e928.png)   
 
