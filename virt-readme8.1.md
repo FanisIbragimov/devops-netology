@@ -65,4 +65,6 @@ ok: [ubuntu] => {
 ![Снимок экрана от 2022-02-06 16-37-39](https://user-images.githubusercontent.com/87299405/152681096-271b3c4a-4f76-47f6-82b1-e10915e1e928.png)   
     
 3. Новый факт появился для localhost значение после запроса пароля расшифровалось.   
-4. 
+4. Добавили новую группу хостов fedora. 
+5. Написали скрипт bash.sh в директории inventory.
+6. https://github.com/FanisIbragimov/ansible
