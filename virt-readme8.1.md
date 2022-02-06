@@ -29,7 +29,34 @@ ok: [ubuntu] => {
 7. Зашифровали файлы group_vars/deb и group_vars/el с паролем netology.    
 8. Запустили плейбук с зашифрованными файлами с запросом пароля "ansible-playbook site.yml -i inventory/prod.yml --ask-vault-pass". Все прошло успешно.   
 9. Для работы на control node целесообразно использовать плагин docker или local.   
-10. 
+10. Добавили в prod.yml хост local:
+```
+---
+  el:
+    hosts:
+      centos7:
+        ansible_connection: docker
+  deb:
+    hosts:
+      ubuntu:
+        ansible_connection: docker
+  local:
+    hosts:
+      localhost:
+        ansible_connection: local
+```    
+11. Запустили ansible. Вывод:
+```
+ok: [localhost] => {
+    "msg": "all default fact"
+}
+ok: [centos7] => {
+    "msg": "el default fact"
+}
+ok: [ubuntu] => {
+    "msg": "deb default fact"
+}
+```   
 
 
 
